@@ -3,6 +3,15 @@
 
     It matches CustomerJobname and will add a StitchingParams if CustomerJobName contains _2staple .
     It matches CustomerInfoLink and will add a StitchingParamsLink if CustomerJobName contains _2staple.
+    
+    This example differs from: add_staples.xslt because the incoming JDF ticket has CustomerInfo defined as follows:
+    <CustomerInfo AgentName="PRISMAsync" AgentVersion="6.1.0.0" Class="Parameter" 
+		  CustomerJobName="ThisIsJob1_2staple" ID="INFO180322095351.956_0" xmlns="">
+    </CustomerInfo>
+    
+    Because of xmlns="" the jdfns no longer applies...
+
+    
 -->
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:oce="http://www.oce.com/JDF_Extension/1_00"
