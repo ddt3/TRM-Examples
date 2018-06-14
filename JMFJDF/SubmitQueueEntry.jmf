@@ -1,5 +1,7 @@
 ﻿<JMF SenderID="SQE1" TimeStamp="INF" Version="1.3" xmlns="http://www.CIP4.org/JDFSchema_1_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Command ID="TRMSQE" Type="C">
+  <Command ID="TRMSQE" Type="SubmitQueueEntry">
+    <!--Submit 2 jobs (it is allowwed to submit multiple jobs in one message)-->
     <QueueSubmissionParams ReturnJMF="http://10.31.28.237:9090/alces/jmf" URL="http://10.31.28.237:8000/jdf/A3-poster-fashion.jdf"/>
+    <QueueSubmissionParams ReturnJMF="http://10.31.28.237:9090/alces/jmf" URL="http://10.31.28.237:8000/jdf/Audit-Ticker.jdf"/>
    </Command>
 </JMF>

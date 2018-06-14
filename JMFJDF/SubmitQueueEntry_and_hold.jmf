@@ -1,0 +1,6 @@
+﻿<JMF SenderID="SQE1" TimeStamp="INF" Version="1.3" xmlns="http://www.CIP4.org/JDFSchema_1_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--Submit a job, send it to the waiting list (Hold) and request updates to be send the the WatchURL -->
+  <Command ID="TRMSQE" Type="SubmitQueueEntry">
+    <QueueSubmissionParams Hold="true" WatchURL="http://10.31.28.237:9090/alces/jmf" ReturnJMF="http://10.31.28.237:9090/alces/jmf" URL="http://10.31.28.237:8000/jdf/A3-poster-fashion.jdf"/>
+   </Command>
+</JMF>
