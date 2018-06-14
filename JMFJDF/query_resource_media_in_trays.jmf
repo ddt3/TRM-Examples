@@ -1,4 +1,5 @@
 <JMF xmlns="http://www.CIP4.org/JDFSchema_1_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!---->
   <Query Type="Resource" xsi:type="QueryResource">
     <ResourceQuParams Classes="Consumable Handling" ResourceName="Media" Scope="Present" />
   </Query>
