@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--This JDF contains a page programming example
+     Eight pages, 2-sided document
+     Red pages for covers (page programmed covers)
+     An insert sheet after page four.-->
+<JDF ID="jdf_1" Type="Combined" Category="DigitalPrinting" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting Stitching" Activation="Active" Status="Waiting" Version="1.3" xmlns="http://www.CIP4.org/JDFSchema_1_1" xmlns:oce="http://www.oce.com/JDF_Extension/1_00" DescriptiveName="8pages.doc">
+  <Comment Name="oce:TicketVersion">4.0</Comment>
+  <ResourcePool>
+    <CustomerInfo ID="info_1" Class="Parameter" Status="Available" CustomerJobName="8pages.doc">
+      <ContactRef rRef="contact_1"/>
+    </CustomerInfo>
+    <RunList ID="runlist_id" Class="Parameter" Status="Available">
+      <LayoutElementRef rRef="file_1"/>
+    </RunList>
+    <LayoutElement ID="file_1" Class="Parameter" Status="Available">
+      <Comment Name="oce:NumberUpContent">1 1</Comment>
+      <FileSpec URL="cid:doc@hostname.com" MimeType="application/postscript"/>
+    </LayoutElement>
+    <LayoutPreparationParams ID="ProcessID_0" Class="Parameter" Status="Available" Sides="TwoSidedFlipY" PartIDKeys="RunIndex">
+      <PageCell>
+        <ImageShift PositionX="Center" PositionY="Center"/>
+      </PageCell>
+      <LayoutPreparationParams RunIndex="0 ~ 3" Sides="TwoSidedFlipY">
+        <!--An insert after page four -->
+        <InsertSheet SheetFormat="Blank" SheetType="InsertSheet" SheetUsage="Trailer">
+          <Layout>
+            <MediaRef rRef="media_insert"/>
+          </Layout>
+        </InsertSheet>
+      </LayoutPreparationParams>
+      <LayoutPreparationParams RunIndex="4 ~ -1" Sides="TwoSidedFlipY"/>
+    </LayoutPreparationParams>
+    <InterpretingParams ID="ProcessID_2" Class="Parameter" Status="Available"/>
+    <RenderingParams ID="ProcessID_3" Class="Parameter" Status="Available"/>
+    <DigitalPrintingParams ID="ProcessID_4" Class="Parameter" Status="Available" PartIDKeys="RunIndex" Collate="Sheet" OutputBin="LargeCapacity-1">
+      <Disjointing OffsetDirection="Alternate"/><--
+      <!-- Page 1 and 2  on red media-->
+      <DigitalPrintingParams RunIndex="0 ~ 1">
+        <MediaRef rRef="media_red"/>
+      </DigitalPrintingParams>
+        <!-- Page 3 to 3rd page before end (-3)   on body media-->
+        <DigitalPrintingParams RunIndex="2 ~ -3">
+        <MediaRef rRef="media_body"/>
+      </DigitalPrintingParams>
+        <!-- 2nd page before end (-2) last page (-1) on body media-->
+        <DigitalPrintingParams RunIndex="-2 ~ -1">
+        <MediaRef rRef="media_red"/>
+      </DigitalPrintingParams>
+    </DigitalPrintingParams>
+    <Component ID="Product_4" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct"/>
+    <StitchingParams ID="ProcessID_5" Class="Parameter" Status="Available" StitchType="Side" NumberOfStitches="0"/>
+    <Component ID="Product_5" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct"/>
+    <Component ID="Product_Final" Class="Quantity" Status="Unavailable" ComponentType="FinalProduct"/>
+    <Media ID="media_red" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" oce:CustomMediaType="Plain paper" MediaColorNameDetails="Red" Weight="80" HoleType="None" MediaSetCount="1"/>
+    <Media ID="media_insert" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" oce:CustomMediaType="Plain paper" MediaColorNameDetails="White" Weight="80" HoleType="None" MediaSetCount="1"/>
+    <Media ID="media_body" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" oce:CustomMediaType="Plain paper" MediaColorNameDetails="White" Weight="75" HoleType="None" MediaSetCount="1"/>
+    <Contact ID="contact_1" Class="Parameter" Status="Available" ContactTypes="Owner Delivery" oce:UserID="vdar">
+      <oce:ComChannel ChannelType="ComputerName" Locator="VDAR317"/>
+    </Contact>
+  </ResourcePool>
+  <ResourceLinkPool>
+    <CustomerInfoLink rRef="info_1" Usage="Input"/>
+    <RunListLink rRef="runlist_id" Usage="Input"/>
+    <MediaLink rRef="media_red" Usage="Input"/>
+    <MediaLink rRef="media_insert" Usage="Input"/>
+    <MediaLink rRef="media_body" Usage="Input"/>
+    <LayoutPreparationParamsLink rRef="ProcessID_0" Usage="Input"/>
+    <InterpretingParamsLink rRef="ProcessID_2" Usage="Input"/>
+    <RenderingParamsLink rRef="ProcessID_3" Usage="Input"/>
+    <DigitalPrintingParamsLink rRef="ProcessID_4" Usage="Input"/>
+    <StitchingParamsLink rRef="ProcessID_5" Usage="Input"/>
+    <ComponentLink rRef="Product_Final" Usage="Output" Amount="1"/>
+  </ResourceLinkPool>
+  <AuditPool>
+    <Created ID="audit_1" AgentName="Oce VarioPrint 6320 PS OC" AgentVersion="SR38.1" TimeStamp="2010-01-19T12:42:14Z"/>
+  </AuditPool>
+</JDF>
