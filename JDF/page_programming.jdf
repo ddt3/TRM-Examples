@@ -51,9 +51,12 @@
     <StitchingParams ID="ProcessID_5" Class="Parameter" Status="Available" StitchType="Side" NumberOfStitches="0"/>
     <Component ID="Product_5" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct"/>
     <Component ID="Product_Final" Class="Quantity" Status="Unavailable" ComponentType="FinalProduct"/>
-    <Media ID="media_red" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" oce:CustomMediaType="Plain paper" MediaColorNameDetails="Red" Weight="80" HoleType="None" MediaSetCount="1"/>
-    <Media ID="media_insert" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" oce:CustomMediaType="Plain paper" MediaColorNameDetails="White" Weight="80" HoleType="None" MediaSetCount="1"/>
-    <Media ID="media_body" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" oce:CustomMediaType="Plain paper" MediaColorNameDetails="White" Weight="75" HoleType="None" MediaSetCount="1"/>
+    <Media ID="media_red" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" 
+            oce:CustomMediaType="Plain paper" MediaColorNameDetails="Red" Weight="80" HoleType="None" MediaSetCount="1"/>
+    <Media ID="media_insert" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" 
+            oce:CustomMediaType="Plain paper" MediaColorNameDetails="White" Weight="80" HoleType="None" MediaSetCount="1"/>
+    <Media ID="media_body" Class="Consumable" Status="Available" Dimension="595.3 841.9" DescriptiveName="" 
+            oce:CustomMediaType="Plain paper" MediaColorNameDetails="White" Weight="75" HoleType="None" MediaSetCount="1"/>
     <Contact ID="contact_1" Class="Parameter" Status="Available" ContactTypes="Owner Delivery" oce:UserID="vdar">
       <oce:ComChannel ChannelType="ComputerName" Locator="VDAR317"/>
     </Contact>

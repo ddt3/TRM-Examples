@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JDF ID="jdf_1" Type="Combined" Category="DigitalPrinting" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting HoleMaking Stitching" Activation="Active" Status="Waiting" Version="1.3" 
+    xmlns="http://www.CIP4.org/JDFSchema_1_1" 
+    xmlns:oce="http://www.oce.com/JDF_Extension/1_00" DescriptiveName="8pages.doc">
+    <Comment Name="oce:TicketVersion">4.0</Comment>
+    <ResourcePool>
+        <CustomerInfo ID="info_1" Class="Parameter" Status="Available" CustomerJobName="8pages.doc">
+            <ContactRef rRef="contact_1"/>
+        </CustomerInfo>
+        <RunList ID="runlist_id" Class="Parameter" Status="Available">
+            <LayoutElementRef rRef="file_1"/>
+        </RunList>
+        <LayoutElement ID="file_1" Class="Parameter" Status="Available">
+            <Comment Name="oce:NumberUpContent">1 1</Comment>
+            <FileSpec URL="cid:doc@hostname.com" MimeType="application/postscript"/>
+        </LayoutElement>
+        <LayoutPreparationParams ID="ProcessID_0" Class="Parameter" Status="Available" Sides="TwoSidedFlipY">
+            <PageCell>
+                <ImageShift PositionX="Center" PositionY="Center"/>
+            </PageCell>
+        </LayoutPreparationParams>
+        <InterpretingParams ID="ProcessID_2" Class="Parameter" Status="Available"/>
+        <RenderingParams ID="ProcessID_3" Class="Parameter" Status="Available"/>
+        <DigitalPrintingParams ID="ProcessID_4" Class="Parameter" Status="Available" PartIDKeys="RunIndex" 
+                    Collate="Sheet" OutputBin="StackerStapler">
+            <Disjointing OffsetDirection="Alternate"/>
+            <DigitalPrintingParams RunIndex="0 ~ -1">
+                <MediaRef rRef="media_1"/>
+            </DigitalPrintingParams>
+        </DigitalPrintingParams>
+        <Component ID="Product_4" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct"/>
+        <HoleMakingParams ID="ProcessID_5" Class="Parameter" Status="Available" HoleType="R2-generic"/>
+        <Component ID="Product_5" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct"/>
+        <StitchingParams ID="ProcessID_6" Class="Parameter" Status="Available" PartIDKeys="RunIndex">
+            <StitchingParams RunIndex="0 ~ 3" StitchType="Side" NumberOfStitches="2"/>
+            <StitchingParams RunIndex="4 ~ -1" StitchType="Side" NumberOfStitches="2"/>
+        </StitchingParams>
+        <Component ID="Product_6" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct"/>
+        <Component ID="Product_Final" Class="Quantity" Status="Unavailable" ComponentType="FinalProduct"/>
+        <Media ID="media_1" Class="Consumable" Status="Available" DescriptiveName="" MediaType="Other" 
+                MediaTypeDetails="Plain" MediaColorName="White" Weight="80" HoleType="None" MediaSetCount="1"/>
+        <Contact ID="contact_1" Class="Parameter" Status="Available" ContactTypes="Owner Delivery" 
+                    oce:UserID="my_name">
+            <oce:ComChannel ChannelType="ComputerName" Locator="my computer"/>
+        </Contact>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <CustomerInfoLink rRef="info_1" Usage="Input"/>
+        <RunListLink rRef="runlist_id" Usage="Input"/>
+        <MediaLink rRef="media_1" Usage="Input"/>
+        <LayoutPreparationParamsLink rRef="ProcessID_0" Usage="Input"/>
+        <InterpretingParamsLink rRef="ProcessID_2" Usage="Input"/>
+        <RenderingParamsLink rRef="ProcessID_3" Usage="Input"/>
+        <DigitalPrintingParamsLink rRef="ProcessID_4" Usage="Input"/>
+        <HoleMakingParamsLink rRef="ProcessID_5" Usage="Input"/>
+        <StitchingParamsLink rRef="ProcessID_6" Usage="Input"/>
+        <ComponentLink rRef="Product_Final" Usage="Output" Amount="1"/>
+    </ResourceLinkPool>
+    <AuditPool>
+        <Created ID="audit_1" AgentName="Oce VarioPrint 6320 PS OC" AgentVersion="SR38.1" 
+                TimeStamp="2010-01-19T13:04:11Z"/>
+    </AuditPool>
+</JDF>
