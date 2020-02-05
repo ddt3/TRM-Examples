@@ -5,9 +5,9 @@
   <!-- Usinge QueueEntryDetails the level of detail for the reply can be defined, auditpool is part of the JDF ticket, therefor detail is JDF-->
   <QueueFilter QueueEntryDetails="JDF">
     <!--Limit the information to a specific queue entries -->
-    <QueueEntryDef QueueEntryID="b6683f7e-4239-460d-84a0-67302d07de56"/>
-    <QueueEntryDef QueueEntryID="08f2c317-615c-406d-a679-9e29b9c4cd06"/>
-    <QueueEntryDef QueueEntryID="c45b5a5e-c176-4672-8fef-223c7fd0cf7d"/>
+    <QueueEntryDef QueueEntryID="job-id1-for-status"/>
+    <QueueEntryDef QueueEntryID="job-id2-for-status"/>
+    <QueueEntryDef QueueEntryID="job-id3-for-statusd"/>
   </QueueFilter>
 <!--PRISMAsync will return the JDF ticket (including auditpootl) for each QueueEnryID -->
 </Query>

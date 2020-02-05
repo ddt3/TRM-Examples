@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JMF xmlns="http://www.CIP4.org/JDFSchema_1_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SenderID="CIP4 Alces 2.3" TimeStamp="2016-02-18T15:31:36+01:00" Version="1.3">
+  <!-- This jmf message can be used to subscribe to media catalog changes, please see Technical Reference Manual for explanation on subscriptions -->
+  <Query ID="ALCES_F4FXGQ_130_20160218153136" Type="Resource" xsi:type="QueryResource">
+    <ResourceQuParams ResourceName="Media" Exact="true" />
+  <!-- Here you should provide an endpoint address for PRISMAsync to send the signals to-->
+  <Subscription URL="http://replace.by.receiver.com/jmf" />
+  </Query>
+</JMF>
