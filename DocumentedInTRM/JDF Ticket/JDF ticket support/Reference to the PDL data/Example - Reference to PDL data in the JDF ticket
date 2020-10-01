@@ -1,0 +1,10 @@
+<JDF>
+    <ResourcePool>
+        <RunList>
+            <LayoutElementRef rRef="file_1" />
+        </RunList>
+        <LayoutElement ID="file_1">
+            <FileSpec URL="http://somewhere/file.pdf" />
+        </LayoutElement>
+    </ResourcePool>
+</JDF>

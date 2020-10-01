@@ -1,0 +1,15 @@
+<JDF Types="LayoutPreparation Imposition Interpreting Rendering ColorSpaceConversion DigitalPrinting">
+    <ResourcePool>
+        <ColorSpaceConversionParams ID="res_1">
+            <ColorSpaceConversionOp SourceCS="RGB" Operation="Tag">
+                <FileSpec ResouceUsage="SourceProfile" MimeType="application/vnd.iccprofile" DescriptiveName="FOGRA27_Coated" />
+            </ColorSpaceConversionOp>
+            <ColorSpaceConversionOp SourceCS="CMYK" Operation="Tag">
+                <FileSpec ResouceUsage="SourceProfile" MimeType="application/vnd.iccprofile" DescriptiveName="FOGRA27_Coated" />
+            </ColorSpaceConversionOp>
+        </ColorSpaceConversionParams>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <ColorSpaceConversionParamsLink rRef="res_1" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

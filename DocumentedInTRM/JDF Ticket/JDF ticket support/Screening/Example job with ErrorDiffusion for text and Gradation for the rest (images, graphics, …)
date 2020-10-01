@@ -1,0 +1,11 @@
+<JDF Types="... Screening ..." ...>
+    <ResourcePool>
+        <ScreeningParams Class="Parameter" ID="ScreenID" Status="Incomplete">
+            <ScreenSelector ScreeningFamily="Gradation" SourceObjects="ImagePhotographic ImageScreenShot LineArt SmoothShades" />
+            <ScreenSelector ScreeningFamily="ErrorDiffusion" SourceObjects="Text" />
+        </ScreeningParams>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <ScreeningParamsLink rRef="ScreenID" Usage="Usage" CombinedProcessIndex="index into Types for Screening" />
+    </ResourceLinkPool>
+</JDF>

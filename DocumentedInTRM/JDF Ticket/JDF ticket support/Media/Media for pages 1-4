@@ -1,0 +1,14 @@
+<JDF>
+    <ResourcePool>
+        <DigitalPrintingParams ID="res_6">
+            <DigitalPrintingParams RunIndex="0 ~ 3">
+                <MediaRef rRef="media_1" />
+            </DigitalPrintingParams>
+        </DigitalPrintingParams>
+        <Media ID="media_1" Class="Consumable" Status="Available" DescriptiveName="" oce:CustomMediaType="Plain paper" MediaColorNameDetails="White" Weight="80" HoleCount="0" HoleType="Explicit" MediaSetCount="1"></Media>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <DigitalPrintingParamsLink rRef="res_6" Usage="Input" />
+        <MediaLink rRef="media_1" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

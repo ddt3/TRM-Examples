@@ -1,0 +1,8 @@
+<JDF ... Type="Combined" Category="DigitalPrinting" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting Stitching" ...>
+    <ResourcePool>
+        ...
+        <LayoutPreparationParams PresentationDirection="FoldCatalog" FoldCatalog="F4-1" PageDistributionScheme="Saddle" 
+            PageOrder="Reader" NumberUp="1 2" BindingEdge="Left">
+        ...
+    </ResourcePool>
+</JDF>

@@ -1,0 +1,19 @@
+<JDF ...=>
+    <ResourcePool>
+        ...
+        <Layout ID="layout_1" Class="Parameter" Status="Available">
+            <MarkObject>
+                <CutMark MarkType="LowerLeftCutMark" />
+                <CutMark MarkType="UpperLeftCutMark" />
+                <CutMark MarkType="LowerRightCutMark" />
+                <CutMark MarkType="UpperRightCutMark" />
+            </MarkObject>
+        </Layout>
+        ...
+    </ResourcePool>
+    <ResourceLinkPool>
+        ...
+        <LayoutLink rRef="layout_1" Usage="Input" />
+        ...
+    </ResourceLinkPool>
+</JDF>

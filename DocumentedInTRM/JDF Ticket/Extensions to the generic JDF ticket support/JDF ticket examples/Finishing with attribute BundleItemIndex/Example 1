@@ -1,0 +1,20 @@
+<JDF Type="Combined" Category="DigitalPrinting" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting" /><ResourcePool>
+    <RunList PartIDKeys="Run" ...>
+        <RunList Run="1" Pages= ”0 ~ 9” EndOfBundleItem="true" />
+        <RunList Run="2" Pages= ”10 ~ -1” />
+    </RunList>
+    <LayoutPreparationParams PartIDKeys="RunIndex" ...>
+        <LayoutPreparationParams RunIndex="0 ~ 9" ...>
+            <InsertSheet SheetUsage="Trailer" IncludeInBundleItem="New" ... />
+            <InsertSheet SheetUsage="Trailer" IncludeInBundleItem="Before" ... />
+        </LayoutPreparationParams>
+        <LayoutPreparationParams RunIndex="10 ~ -1" ...>
+            <InsertSheet SheetUsage="Header" ... />
+        </LayoutPreparationParams>
+    </LayoutPreparationParams>
+    <GatheringParams PartIDKeys="BundleItemIndex" ...>
+        <GatheringParams BundleItemIndex="0" ... /> <!-- pages 1 to 10 -->
+        <GatheringParams BundleItemIndex="1" ... /> <!-- 2 trailer InsertSheets -->
+        <GatheringParams BundleItemIndex="2" ... /> <!-- 1 insert + pages 11 to last-->
+    </GatheringParams>
+</ResourcePool></JDF>

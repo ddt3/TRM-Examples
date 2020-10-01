@@ -1,0 +1,8 @@
+<JDF Type="Combined" Types="... Interpreting ...">
+    <ResourcePool>
+        <InterpretingParams ID="res_1" Class="Parameter" Scaling="0.71 0.71" Status="Available" />
+    </ResourcePool>
+    <ResourceLinkPool>
+        <InterpretingParamsLink rRef="res_1" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

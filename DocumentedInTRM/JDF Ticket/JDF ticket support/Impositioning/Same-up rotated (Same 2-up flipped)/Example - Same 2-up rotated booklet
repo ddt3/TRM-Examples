@@ -1,0 +1,12 @@
+<JDF Type="Combined" Types="... LayoutPreparation ...">
+    <ResourcePool>
+        <LayoutPreparationParams ID="NodeIDLPP" Class="Parameter" Status="Available" PresentationDirection="FoldCatalog" FoldCatalog="F4-1" 
+                PageDistributionScheme="Saddle" NumberUp="2 2" BindingEdge="Left" StepRepeat=" 1 2 1" />
+        <GeneralID IDUsage=" oce:StepRepeatRotate180" DataType=" NMTOKEN" IDValue=" OddRows" />
+    </ResourcePool>
+    ...
+    <ResourceLinkPool>
+        <LayoutPreparationParamsLink rRef=" NodeIDLPP" Usage=" Input" />
+        ...
+    </ResourceLinkPool>
+</JDF>

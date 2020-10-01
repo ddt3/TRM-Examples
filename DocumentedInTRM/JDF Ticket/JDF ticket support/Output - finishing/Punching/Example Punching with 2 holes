@@ -1,0 +1,8 @@
+<JDF Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting HoleMaking">
+    <ResourcePool>
+        <HoleMakingParams ID="res_9" HoleType="R2-generic" />
+    </ResourcePool>
+    <ResourceLinkPool>
+        <HoleMakingParamsLink rRef="res_9" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

@@ -1,0 +1,25 @@
+<JDF …=>
+    <ResourcePool>
+        ...
+        <Layout ID="layout_1" Class="Parameter" Status="Available">
+            <MarkObject>
+                <JobField>
+                    <GeneralID IDUsage="oce:PageNumber" IDValue="1" />
+                </JobField>
+                <JobField>
+                    <GeneralID IDUsage="oce:Prefix" IDValue="Bates" />
+                </JobField>
+                <JobField>
+                    <GeneralID IDUsage="oce:Suffix" IDValue="Stamping" />
+                </JobField>
+                <DeviceMark MarkJustification="Center" MarkPosition="Top" />
+            </MarkObject>
+        </Layout>
+        ...
+    </ResourcePool>
+    <ResourceLinkPool>
+        ...
+        <LayoutLink rRef="layout_1" Usage="Input" />
+        ...
+    </ResourceLinkPool>
+</JDF>

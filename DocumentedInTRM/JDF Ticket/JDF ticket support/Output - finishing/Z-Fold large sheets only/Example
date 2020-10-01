@@ -1,0 +1,7 @@
+<JDF Type="Combined" Types="... Folding ...">
+    <ResourcePool>
+        <FoldingParams ID="res_1" FoldCatalog="F6-7">
+            <GeneralID IDUsage="oce:ZFoldLargeSheetsOnly" DataType="boolean" IDValue="true" />
+        </FoldingParams>
+    </ResourcePool>
+</JDF>

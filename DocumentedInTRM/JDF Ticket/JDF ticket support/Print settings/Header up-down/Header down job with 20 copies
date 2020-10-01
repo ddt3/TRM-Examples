@@ -1,0 +1,10 @@
+<JDF Type="Combined" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting HoleMaking Folding Stitching">
+    <ResourcePool>
+        <Component ID="res_1" ComponentType="FinalProduct" />
+        <Component ID="res_2" ComponentType="PartialProduct" Status="Unavailable" />
+    </ResourcePool>
+    <ResourceLinkPool>
+        <ComponentLink rRef= ”res_1” Usage= ”Output” Amount= ”20” />
+        <ComponentLink rRef= ”res_2” Usage= ”Output” Orientation="Rotate180" CombinedProcessIndex= ”4” />
+    </ResourceLinkPool>
+</JDF>

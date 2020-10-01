@@ -1,0 +1,6 @@
+<ResourceLinkPool>
+    <UsageCounterLink rRef="Counter_NormalBlack_170705172010.281" ActualAmount="11" Usage="Input" />
+    <UsageCounterLink rRef="Counter_LargeBlack_170705172010.281" ActualAmount="9" oce:ActualAmountA3BW="9" oce:ActualAmountXLBW="0" Usage="Input" />
+    <UsageCounterLink rRef="Counter_OneSided_170705172010.281" ActualAmount="14" Usage="Input" />
+    <UsageCounterLink rRef="Counter_TwoSided_170705172010.2810" ActualAmount="18" Usage="Input" />
+</ResourceLinkPool>

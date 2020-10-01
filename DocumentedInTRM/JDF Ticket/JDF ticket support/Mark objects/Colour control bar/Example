@@ -1,0 +1,13 @@
+<JDF>
+    <ResourcePool>
+        <Layout ID="layout_1" Class="Parameter" Status="Available">
+            <MarkObject>
+                <ColorControlStrip DescriptiveName="IDEAlliance Control Strip 2009" />
+                <DeviceMark MarkPosition="Left" MarkJustification="Center" />
+            </MarkObject>
+        </Layout>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <LayoutLink rRef="layout_1" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

@@ -1,0 +1,8 @@
+<AuditPool>
+    <ResourceAudit QueueEntryID="b81995b3-a24e-4d0b-a7fc-7bd8398772c9" TimeStamp="2017-07-05T17:20:10Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+        <UsageCounterLink rRef="Counter_LargeBlack_170705172010.281" ActualAmount="9" oce:ActualAmountA3BW="9" oce:ActualAmountXLBW="0" Usage="Input" />
+    </ResourceAudit>
+    <ResourceAudit QueueEntryID="b81995b3-a24e-4d0b-a7fc-7bd8398772c9" TimeStamp="2017-07-05T17:20:10Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+        <UsageCounterLink rRef="Counter_ OneSided _170705172010.281" ActualAmount="14" Usage="Input" />
+    </ResourceAudit>
+</AuditPool>

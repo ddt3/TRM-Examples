@@ -1,0 +1,12 @@
+<JDF Type="Combined" Types="... LayoutPreparation ...">
+    <ResourcePool>
+        <LayoutPreparationParams ID="NodeIDLPP" Class="Parameter" Status="Available" NumberUp="2 1" StepRepeat="2 1 1"
+            <GeneralID IDUsage="oce:StepRepeatRotate180" DataType="NMTOKEN" IDValue="OddColumns" />
+            />
+    </ResourcePool>
+    ...
+    <ResourceLinkPool>
+        <LayoutPreparationParamsLink rRef="NodeIDLPP" Usage="Input" />
+        ...
+    </ResourceLinkPool>
+</JDF>

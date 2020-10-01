@@ -1,0 +1,30 @@
+<JDF Types="... DigitalPrintingParams ..." ...>
+    <Comment Name="oce:Covers">FrontBack</Comment>
+    ...
+    <ResourcePool>
+        <LayoutPreparationParams ID="res_3" Class="Parameter" Status="Available" PartIDKeys="RunIndex">
+            <LayoutPreparationParams RunIndex="0 ~ 1" Sides="TwoSidedFlipY" />
+            <LayoutPreparationParams RunIndex="2 ~ -3" Sides="OneSidedFront" />
+            <LayoutPreparationParams RunIndex="-2 ~ -1" Sides="TwoSidedFlipY" />
+            ...
+            <DigitalPrintingParams ID="res_6" Class="Parameter" Status="Available" PartIDKeys="RunIndex">
+                <MediaRef rRef="media_job" />
+                <DigitalPrintingParams RunIndex="0 ~ 1">
+                    <MediaRef rRef="media_front" />
+                </DigitalPrintingParams>
+                <DigitalPrintingParams RunIndex="-2 ~ -1">
+                    <MediaRef rRef="media_back" />
+                </DigitalPrintingParams>
+            </DigitalPrintingParams>
+            ...
+            <Media ID="media_front" ...</Media>
+            <Media ID="media_back" ...</Media>
+            <Media ID="media_job" ...</Media>
+    </ResourcePool>
+    <ResourceLinkPool>
+        ...
+        <LayoutPreparationParamsLink rRef="res_3" Usage="Input" />
+        <DigitalPrintingParamsLink rRef="res_6" Usage="Input" />
+        ...
+    </ResourceLinkPool>
+</JDF>

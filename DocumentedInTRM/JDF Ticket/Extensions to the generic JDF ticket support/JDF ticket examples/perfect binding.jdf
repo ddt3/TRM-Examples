@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JDF Category="DigitalPrinting" ID="MainJDFId_97eb6e38-2f90-40ee-af46-c8dfbc39eb00" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting CoverApplication" Activation="Active" Status="Waiting" Version="1.3" Type="Combined" Template="false" xmlns:oce="http://www.cpp.canon/JDF_Extension/1_00" xmlns="http://www.CIP4.org/JDFSchema_1_1">
+    <ResourcePool>
+        <CustomerInfo Class="Parameter" ID="LinkCustomerInfo" Status="Available" CustomerJobName="PRISMAproduction - File2 - PP.pdf">
+            <ContactRef rRef="Contact_77a6c20e-7087-40fc-bc82-8ff13a59b55e" />
+        </CustomerInfo>
+        <Contact ContactTypes="Owner Delivery" Class="Parameter" ID="Contact_77a6c20e-7087-40fc-bc82-8ff13a59b55e" Status="Available" oce:UserID="Administrator">
+            <oce:ComChannel Locator="VISTA_SP2" ChannelType="ComputerName" />
+        </Contact>
+        <Media PrePrinted="false" Class="Consumable" ID="Media_75787124-b272-4510-8e43-49e8e9a89d76" Status="Available" Dimension="851.0 595.0" DescriptiveName="" MediaSetCount="1" />
+        <Media PrePrinted="false" Class="Consumable" ID="Media_7065aae9-1dd9-4ecb-8e54-684cb1b99a8b" Status="Available" Dimension="420.0 595.0" DescriptiveName="" MediaSetCount="1" />
+        <RunList Class="Parameter" ID="RunList_bc3398f9-f94c-4948-b9d6-89d63e2bc3a5" Status="Available" NPage="78">
+            <LayoutElementRef rRef="LayoutElement_1474672c-4dbd-48f8-a4b2-91949b24eae9" />
+        </RunList>
+        <LayoutElement Class="Parameter" ID="LayoutElement_1474672c-4dbd-48f8-a4b2-91949b24eae9" Status="Available">
+            <FileSpec URL="file:///C:/tmpD19.tmp" MimeType="application/pdf" MimeTypeVersion="PDF/X-3:2003" />
+        </LayoutElement>
+        <LayoutPreparationParams Rotate="Rotate0" Sides="TwoSidedFlipY" Class="Parameter" ID="LayoutPreparationParams_4b3b183d-3ba4-475f-b919-3cd635f63652" Status="Available" PartIDKeys="RunIndex" NumberUp="1.0 1.0">
+            <LayoutPreparationParams Sides="TwoSidedFlipY" RunIndex="0 ~ 1" Rotate="Rotate0" />
+            <LayoutPreparationParams Sides="TwoSidedFlipY" RunIndex="2 ~ 77" Rotate="Rotate0" />
+        </LayoutPreparationParams>
+        <DigitalPrintingParams Class="Parameter" ID="DigitalPrintingParams_8f744f76-1741-4b67-9d6f-9b2157c9c78f" Status="Available" PartIDKeys="RunIndex" Collate="Sheet">
+            <MediaRef rRef="Media_75787124-b272-4510-8e43-49e8e9a89d76" />
+            <Disjointing OffsetDirection="None" />
+            <DigitalPrintingParams RunIndex="0 ~ 1">
+                <MediaRef rRef="Media_75787124-b272-4510-8e43-49e8e9a89d76" />
+            </DigitalPrintingParams>
+            <DigitalPrintingParams RunIndex="2 ~ 77">
+                <MediaRef rRef="Media_7065aae9-1dd9-4ecb-8e54-684cb1b99a8b" />
+            </DigitalPrintingParams>
+        </DigitalPrintingParams>
+        <InterpretingParams Class="Parameter" ID="Interpreting-cd0e1f86-7abd-40ca-9931-c79561005b6e" Status="Available" />
+        <RenderingParams Class="Parameter" ID="Rendering-5b522a63-bc30-41ae-8105-8c9de9464197" Status="Available">
+            <ObjectResolution Resolution="600.0 600.0" />
+        </RenderingParams>
+        <CoverApplicationParams Class="Parameter" ID="CoverApplication_a58fc850-516f-4bc0-8f01-4bd213eb3ce7" Status="Available" />
+        <Component ComponentType="PartialProduct" Class="Quantity" ID="Component_ForCoverApplication" Status="Unavailable" PartIDKeys="RunIndex">
+            <Component RunIndex="0 ~ 1" />
+            <Component RunIndex="2 ~ 77" />
+        </Component>
+        <Component ComponentType="FinalProduct" Class="Quantity" ID="Component_a58fc850-516f-4bc0-8f01-4bd213eb3ce7" Status="Unavailable" />
+    </ResourcePool>
+    <ResourceLinkPool>
+        <CustomerInfoLink rRef="LinkCustomerInfo" Usage="Input" />
+        <MediaLink rRef="Media_75787124-b272-4510-8e43-49e8e9a89d76" Usage="Input" />
+        <MediaLink rRef="Media_7065aae9-1dd9-4ecb-8e54-684cb1b99a8b" Usage="Input" />
+        <RunListLink rRef="RunList_bc3398f9-f94c-4948-b9d6-89d63e2bc3a5" Usage="Input" />
+        <LayoutPreparationParamsLink rRef="LayoutPreparationParams_4b3b183d-3ba4-475f-b919-3cd635f63652" Usage="Input" />
+        <DigitalPrintingParamsLink rRef="DigitalPrintingParams_8f744f76-1741-4b67-9d6f-9b2157c9c78f" Usage="Input" />
+        <InterpretingParamsLink rRef="Interpreting-cd0e1f86-7abd-40ca-9931-c79561005b6e" Usage="Input" />
+        <RenderingParamsLink rRef="Rendering-5b522a63-bc30-41ae-8105-8c9de9464197" Usage="Input" />
+        <CoverApplicationParamsLink rRef="CoverApplication_a58fc850-516f-4bc0-8f01-4bd213eb3ce7" Usage="Input" />
+        <ComponentLink rRef="Component_ForCoverApplication" Usage="Input" CombinedProcessIndex="5" />
+        <ComponentLink rRef="Component_a58fc850-516f-4bc0-8f01-4bd213eb3ce7" Usage="Output" Amount="1.0" CombinedProcessIndex="5" />
+    </ResourceLinkPool>
+    <AuditPool>
+        <Created TimeStamp="2010-09-13T13:35:40Z" ID="audit_1" AgentName="PRISMAprepare" AgentVersion="5.1.0" />
+    </AuditPool>
+</JDF>

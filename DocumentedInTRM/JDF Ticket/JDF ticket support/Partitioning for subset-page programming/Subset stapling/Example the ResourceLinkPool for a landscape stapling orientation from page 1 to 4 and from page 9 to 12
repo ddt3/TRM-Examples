@@ -1,0 +1,22 @@
+<ResourceLinkPool>
+    <ComponentLink Usage="Input" rRef="res_ref" CombinedProccessIndex="7">
+        <AmountPool>
+            <PartAmount Orientation="Flip0">
+                <Part RunIndex="0 ~ 3" />
+            </PartAmount>
+            <PartAmount Orientation="Flip0">
+                <Part RunIndex="8 ~ 11" />
+            </PartAmount>
+        </AmountPool>
+    </ComponentLink>
+    <ComponentLink Usage="Output" rRef="res_ref" CombinedProccessIndex="7">
+        <AmountPool>
+            <PartAmount Orientation="Flip0">
+                <Part RunIndex="0 ~ 3" />
+            </PartAmount>
+            <PartAmount Orientation="Flip0">
+                <Part RunIndex="8 ~ 11" />
+            </PartAmount>
+        </AmountPool>
+    </ComponentLink>
+</ResourceLinkPool>

@@ -1,0 +1,7 @@
+<JDF Type="Combined" Types="... ColorSpaceConversion ...">
+    <ResourcePool>
+        <ColorSpaceConversionParams ID="res_1">
+            <GeneralID IDUsage="oce:ColorMappingGroup" DataType="string" IDValue="group2" />
+        </ColorSpaceConversionParams>
+    </ResourcePool>
+</JDF>

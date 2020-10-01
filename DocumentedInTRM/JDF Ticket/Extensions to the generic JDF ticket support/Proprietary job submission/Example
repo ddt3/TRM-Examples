@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JDF>
+    <ResourcePool>
+        <RunList>
+            <LayoutElementRef rRef="file_1" />
+        </RunList>
+        <LayoutElement ID="file_1">
+            <FileSpec URL="cid:doc@hostname.com" />
+        </LayoutElement>
+    </ResourcePool>
+</JDF>
+%!PS-Adobe-3.0
+...

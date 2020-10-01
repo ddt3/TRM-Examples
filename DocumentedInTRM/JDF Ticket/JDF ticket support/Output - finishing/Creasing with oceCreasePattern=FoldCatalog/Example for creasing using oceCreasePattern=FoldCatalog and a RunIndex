@@ -1,0 +1,13 @@
+<JDF Type="Combined" Types="... Creasing ...">
+    <ResourcePool>
+        <CreasingParams ID="res_1" Class="Parameter" Status="Available" PartIDKeys="RunIndex">
+            <CreasingParams RunIndex="0 ~ 5 6 ~ 10 11 ~ 15">
+                <GeneralID IDUsage="oce:CreasePattern" IDValue="FoldCatalog" />
+                <GeneralID IDUsage="oce:FoldCatalog" IDValue="F4-1 " />
+            </CreasingParams>
+        </CreasingParams>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <CreasingParamsLink rRef="res_1" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

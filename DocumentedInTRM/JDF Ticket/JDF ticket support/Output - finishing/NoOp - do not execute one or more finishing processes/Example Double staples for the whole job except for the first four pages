@@ -1,0 +1,10 @@
+<JDF ID="jdf_1" Type="Combined" Category="DigitalPrinting" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting Stitching">
+    <ResourcePool>
+        <StitchingParams ID="ProcessID_5" Class="Parameter" Status="Available" PartIDKeys="RunIndex" StitchType="Side" NumberOfStitches="2">
+            <StitchingParams RunIndex="1 ~ 4" NoOp="true" />
+        </StitchingParams>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <StitchingParamsLink rRef="ProcessID_5" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

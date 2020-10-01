@@ -1,0 +1,12 @@
+<JDF ID="jdf_1" Type="Combined" Category="DigitalPrinting" Types="LayoutPreparation Imposition Interpreting Rendering DigitalPrinting Stitching">
+    <ResourcePool>
+        <Component ID="Product_4" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct" />
+        <StitchingParams ID="ProcessID_5" Class="Parameter" Status="Available" StitchType="Side" NumberOfStitches="2" />
+        <Component ID="Product_5" Class="Quantity" Status="Unavailable" ComponentType="PartialProduct" />
+    </ResourcePool>
+    <ResourceLinkPool>
+        <ComponentLink rRef="Product_4" Usage="Input" Orientation="Flip0" CombinedProcessIndex="5" />
+        <StitchingParamsLink rRef="ProcessID_5" Usage="Input" />
+        <ComponentLink rRef="Product_5" Usage="Output" Orientation="Flip0" CombinedProcessIndex="5" />
+    </ResourceLinkPool>
+</JDF>

@@ -1,0 +1,10 @@
+<JDF Type="Combined" Types="... Creasing ...">
+    <ResourcePool>
+        <CreasingParams ID="res_1" Class="Parameter" Status="Available">
+            <Crease RelativeStartPosition="0.5 0" RelativeWorkingPath="0 1"></Crease>
+        </CreasingParams>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <CreasingParamsLink rRef="res_1" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

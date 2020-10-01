@@ -1,0 +1,6 @@
+<AuditPool>
+<PhaseTime QueueEntryID="b81995b3-a24e-4d0b-a7fc-7bd8398772c9" TimeStamp="2017-07-05T17:20:10Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Start="2017-07-05T17:19:47Z" End="2017-07-05T17:19:49Z" Status="InProgress">
+<MediaLink rRef="Media_170705172010.281_0" ActualAmount="11" Usage="Input"/>
+<MediaLink rRef="Media_170705172010.281_1" ActualAmount="18" Usage="Input"/>
+</PhaseTime>
+</AuditPool>

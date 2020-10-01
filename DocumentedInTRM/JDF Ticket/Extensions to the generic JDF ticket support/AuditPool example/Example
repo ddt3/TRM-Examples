@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JDF Activation="Active" Category="DigitalPrinting" ID="jdf_1" JobID=" [ALCES_ZNVQPR_1_20170706093439]" Status="Completed" Type="Combined" Types="LayoutPreparation Imposition Interpreting Rendering ColorCorrection ColorSpaceConversion Trapping Screening DigitalPrinting oce:Mailbox HoleMaking Folding Stitching" Version="1.3" xmlns="http://www.CIP4.org/JDFSchema_1_1" xmlns:oce="http://www.cpp.canon/JDF_Extension/1_00" StatusDetails="">
+    <Comment Name="oce:TicketVersion">4.00</Comment>
+    <ResourcePool>
+        ... (original ticket removed)
+        <UsageCounter CounterTypes="Impressions" ID="UsageCounter_ID" />
+        <Media ID="Media_170706130624.649_0" Class="Consumable" Dimension="595.27559055 841.88976378" Status="Available" Weight="135" MediaColorName="White" HoleType="None" MediaSetCount="1" MediaType="Paper" MediaTypeDetails="TopColor" oce:CustomMediaType="TopColor">
+            <GeneralID IDUsage="DeviceProductID" IDValue="F34FC9D0" />
+        </Media>
+        <Media ID="Media_170706130624.649_1" Class="Consumable" Dimension="595.27559055 841.88976378" Status="Available" Weight="100" MediaColorName="White" HoleType="None" MediaSetCount="1" MediaType="Paper" MediaTypeDetails="TopColor" oce:CustomMediaType="TopColor">
+            <GeneralID IDUsage="DeviceProductID" IDValue="25928EBD" />
+        </Media>
+        <Media ID="Media_170706130624.649_2" Class="Consumable" Dimension="841.88976378 1190.5511811" Status="Available" Weight="100" MediaColorName="White" HoleType="None" MediaSetCount="1" MediaType="Paper" MediaTypeDetails="TopColor" oce:CustomMediaType="TopColor">
+            <GeneralID IDUsage="DeviceProductID" IDValue="F830CB37" />
+        </Media>
+        <Media ID="Media_170706130624.649_3" Class="Consumable" Dimension="841.88976378 1190.5511811" Status="Available" Weight="135" MediaColorName="White" HoleType="None" MediaSetCount="1" MediaType="Paper" MediaTypeDetails="TopColor" oce:CustomMediaType="TopColor">
+            <GeneralID IDUsage="DeviceProductID" IDValue="C34369A6">
+        </Media>
+        <Ink Class="Consumable" ID="Ink_170706130624.649_4" Family="InkJet" PartIDKeys="Separation" Status="Available" Unit="l" AgentName="PRISMAsync" AgentVersion="2.2.0.0">
+            <Ink ColorName="Cyan" Separation="Cyan">
+                <Color CMYK="1 0 0 0" />
+            </Ink>
+            <Ink ColorName="Magenta" Separation="Magenta">
+                <Color CMYK="0 1 0 0" />
+            </Ink>
+            <Ink ColorName="Yellow" Separation="Yellow">
+                <Color CMYK="0 0 1 0" />
+            </Ink>
+            <Ink ColorName="Black" Separation="Black">
+                <Color CMYK="0 0 0 1" />
+            </Ink>
+            <Ink ColorName="MICR" Separation="MICR" />
+            <Ink ColorName="ColorGrip" Separation="ColorGrip" />
+        </Ink>
+        <UsageCounter ID="Counter_NormalBlack_170706130624.649_5" Class="Consumable" CounterTypes="Impressions Black Blank Insert OneSided TwoSided NormalSize" Scope="Job" Status="Available" />
+        <UsageCounter ID="Counter_NormalColor_170706130624.649_6" Class="Consumable" CounterTypes="Impressions Color OneSided TwoSided NormalSize" Scope="Job" Status="Available" />
+        <UsageCounter ID="Counter_LargeBlack_170706130624.649_7" Class="Consumable" CounterTypes="Impressions Black Blank Insert OneSided TwoSided LargeSize" Scope="Job" Status="Available" />
+        <UsageCounter ID="Counter_LargeColor_170706130624.649_8" Class="Consumable" CounterTypes="Impressions Color OneSided TwoSided LargeSize" Scope="Job" Status="Available" />
+        <UsageCounter ID="Counter_OneSided_170706130624.649_9" Class="Consumable" CounterTypes="Impressions Black Blank Color OneSided" Scope="Job" Status="Available" />
+        <UsageCounter ID="Counter_TwoSided_170706130624.649_10" Class="Consumable" CounterTypes="Impressions Black Blank Color TwoSided" Scope="Job" Status="Available" />
+    </ResourcePool>
+    <ResourceLinkPool>
+        ... (original ticket removed)
+        <MediaLink rRef="Media_170706130624.649_0" ActualAmount="10" Usage="Input" />
+        <MediaLink rRef="Media_170706130624.649_1" ActualAmount="120" Usage="Input" />
+        <MediaLink rRef="Media_170706130624.649_2" ActualAmount="30" Usage="Input" />
+        <MediaLink rRef="Media_170706130624.649_3" ActualAmount="70" Usage="Input" />
+        <InkLink rRef="Ink_170706130624.649_4" Usage="Input">
+            <AmountPool>
+                <PartAmount ActualAmount="0.00046">
+                    <Part Separation="Cyan" />
+                </PartAmount>
+                <PartAmount ActualAmount="0.000575">
+                    <Part Separation="Magenta" />
+                </PartAmount>
+                <PartAmount ActualAmount="0.00069">
+                    <Part Separation="Yellow" />
+                </PartAmount>
+                <PartAmount ActualAmount="0.000805" oce:ActualAmountBlackOnly="0">
+                    <Part Separation="Black">
+                </PartAmount>
+                <PartAmount ActualAmount="0.001035">
+                    <Part Separation="MICR" />
+                </PartAmount>
+                <PartAmount ActualAmount="0.00092">
+                    <Part Separation="ColorGrip" />
+                </PartAmount>
+            </AmountPool>
+        </InkLink>
+        <UsageCounterLink rRef="Counter_NormalBlack_170706130624.649_5" ActualAmount="110" Usage="Input" />
+        <UsageCounterLink rRef="Counter_NormalColor_170706130624.649_6" ActualAmount="250" oce:ActualAmountA4Color="70" oce:ActualAmountA4MICR="180" Usage="Input" />
+        <UsageCounterLink rRef="Counter_LargeBlack_170706130624.649_7" ActualAmount="90" oce:ActualAmountA3BW="90" oce:ActualAmountXLBW="0" Usage="Input" />
+        <UsageCounterLink rRef="Counter_LargeColor_170706130624.649_8" ActualAmount="190" oce:ActualAmountA3Color="50" oce:ActualAmountXLColor="0" oce:ActualAmountA3MICR="140" oce:ActualAmountXLMICR="0" Usage="Input" />
+        <UsageCounterLink rRef="Counter_OneSided_170706130624.649_9" ActualAmount="140" Usage="Input" />
+        <UsageCounterLink rRef="Counter_TwoSided_170706130624.649_10" ActualAmount="180" Usage="Input" />
+    </ResourceLinkPool>
+    <AuditPool>
+        <Created AgentName="Canon imagePRESS C10000VP series PS3 US" AgentVersion="16.8.1.23 cmrepro@OVL-BS17" ID="audit_1" TimeStamp="2017-06-16T12:23:01Z" />
+        <PhaseTime QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:24Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Start="2017-07-06T13:06:01Z" End="2017-07-06T13:06:16Z" Status="InProgress">
+            <MediaLink rRef="Media_170706130624.649_0" ActualAmount="6" Usage="Input" />
+            <MediaLink rRef="Media_170706130624.649_1" ActualAmount="72" Usage="Input" />
+            <MediaLink rRef="Media_170706130624.649_2" ActualAmount="18" Usage="Input" />
+            <MediaLink rRef="Media_170706130624.649_3" ActualAmount="42" Usage="Input" />
+            <InkLink rRef="Ink_170706130624.649_4" Usage="Input">
+                <AmountPool>
+                    <PartAmount ActualAmount="0.000276">
+                        <Part Separation="Cyan" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000345">
+                        <Part Separation="Magenta" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000414">
+                        <Part Separation="Yellow" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000483" oce:ActualAmountBlackOnly="0">
+                        <Part Separation="Black" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000621">
+                        <Part Separation="MICR" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000552">
+                        <Part Separation="ColorGrip" />
+                    </PartAmount>
+                </AmountPool>
+            </InkLink>
+            <UsageCounterLink rRef="Counter_NormalBlack_170706130624.649_5" ActualAmount="66" Usage="Input" />
+            <UsageCounterLink rRef="Counter_NormalColor_170706130624.649_6" ActualAmount="150" oce:ActualAmountA4Color="42" oce:ActualAmountA4MICR="108" Usage="Input" />
+            <UsageCounterLink rRef="Counter_LargeBlack_170706130624.649_7" ActualAmount="54" oce:ActualAmountA3BW="54" oce:ActualAmountXLBW="0" Usage="Input" />
+            <UsageCounterLink rRef="Counter_LargeColor_170706130624.649_8" ActualAmount="114" oce:ActualAmountA3Color="30" oce:ActualAmountXLColor="0" oce:ActualAmountA3MICR="84" oce:ActualAmountXLMICR="0" Usage="Input" />
+            <UsageCounterLink rRef="Counter_OneSided_170706130624.649_9" ActualAmount="84" Usage="Input" />
+            <UsageCounterLink rRef="Counter_TwoSided_170706130624.649_10" ActualAmount="108" Usage="Input" />
+        </PhaseTime>
+        <PhaseTime QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:24Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Start="2017-07-06T13:06:16Z" End="2017-07-06T13:06:24Z" Status="Stopped" />
+        <PhaseTime QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:24Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Start="2017-07-06T13:06:24Z" Status="Suspended" />
+        <PhaseTime QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Start="2017-07-06T13:06:50Z" End="2017-07-06T13:06:58Z" Status="InProgress">
+            <MediaLink rRef="Media_170706130624.649_0" ActualAmount="4" Usage="Input" />
+            <MediaLink rRef="Media_170706130624.649_1" ActualAmount="48" Usage="Input" />
+            <MediaLink rRef="Media_170706130624.649_2" ActualAmount="12" Usage="Input" />
+            <MediaLink rRef="Media_170706130624.649_3" ActualAmount="28" Usage="Input" />
+            <InkLink rRef="Ink_170706130624.649_4" Usage="Input">
+                <AmountPool>
+                    <PartAmount ActualAmount="0.000184">
+                        <Part Separation="Cyan" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.00023">
+                        <Part Separation="Magenta" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000276">
+                        <Part Separation="Yellow" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000322" oce:ActualAmountBlackOnly="0">
+                        <Part Separation="Black" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000414">
+                        <Part Separation="MICR" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000368">
+                        <Part Separation="ColorGrip" />
+                    </PartAmount>
+                </AmountPool>
+            </InkLink>
+            <UsageCounterLink rRef="Counter_NormalBlack_170706130624.649_5" ActualAmount="44" Usage="Input" />
+            <UsageCounterLink rRef="Counter_NormalColor_170706130624.649_6" ActualAmount="100" oce:ActualAmountA4Color="28" oce:ActualAmountA4MICR="72" Usage="Input" />
+            <UsageCounterLink rRef="Counter_LargeBlack_170706130624.649_7" ActualAmount="36" oce:ActualAmountA3BW="36" oce:ActualAmountXLBW="0" Usage="Input" />
+            <UsageCounterLink rRef="Counter_LargeColor_170706130624.649_8" ActualAmount="76" oce:ActualAmountA3Color="20" oce:ActualAmountXLColor="0" oce:ActualAmountA3MICR="56" oce:ActualAmountXLMICR="0" Usage="Input" />
+            <UsageCounterLink rRef="Counter_OneSided_170706130624.649_9" ActualAmount="56" Usage="Input" />
+            <UsageCounterLink rRef="Counter_TwoSided_170706130624.649_10" ActualAmount="72" Usage="Input" />
+        </PhaseTime>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <MediaLink rRef="Media_170706130624.649_0" ActualAmount="10" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <MediaLink rRef="Media_170706130624.649_1" ActualAmount="120" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <MediaLink rRef="Media_170706130624.649_2" ActualAmount="30" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <MediaLink rRef="Media_170706130624.649_3" ActualAmount="70" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <InkLink rRef="Ink_170706130624.649_4" Usage="Input">
+                <AmountPool>
+                    <PartAmount ActualAmount="0.00046">
+                        <Part Separation="Cyan" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000575">
+                        <Part Separation="Magenta" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.00069">
+                        <Part Separation="Yellow" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.000805" oce:ActualAmountBlackOnly="0">
+                        <Part Separation="Black" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.001035">
+                        <Part Separation="MICR" />
+                    </PartAmount>
+                    <PartAmount ActualAmount="0.00092">
+                        <Part Separation="ColorGrip" />
+                    </PartAmount>
+                </AmountPool>
+            </InkLink>
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <UsageCounterLink rRef="Counter_NormalBlack_170706130624.649_5" ActualAmount="110" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <UsageCounterLink rRef="Counter_NormalColor_170706130624.649_6" ActualAmount="250" oce:ActualAmountA4Color="70" oce:ActualAmountA4MICR="180" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <UsageCounterLink rRef="Counter_LargeBlack_170706130624.649_7" ActualAmount="90" oce:ActualAmountA3BW="90" oce:ActualAmountXLBW="0" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <UsageCounterLink rRef="Counter_LargeColor_170706130624.649_8" ActualAmount="190" oce:ActualAmountA3Color="50" oce:ActualAmountXLColor="0" oce:ActualAmountA3MICR="140" oce:ActualAmountXLMICR="0" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <UsageCounterLink rRef="Counter_OneSided_170706130624.649_9" ActualAmount="140" Usage="Input" />
+        </ResourceAudit>
+        <ResourceAudit QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Reason="ProcessResult">
+            <UsageCounterLink rRef="Counter_TwoSided_170706130624.649_10" ActualAmount="180" Usage="Input" />
+        </ResourceAudit>
+        <ProcessRun QueueEntryID="bc5accc7-f31b-42ce-8894-87ce71634618" TimeStamp="2017-07-06T07:36:59Z" AgentName="PRISMAsync" AgentVersion="2.2.0.0" Start="2017-07-06T13:06:01Z" End="2017-07-06T13:06:58Z" Duration="PT23S" EndStatus="Completed" />
+    </AuditPool>
+</JDF>

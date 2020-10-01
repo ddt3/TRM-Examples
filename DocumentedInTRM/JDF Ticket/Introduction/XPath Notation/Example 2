@@ -1,0 +1,7 @@
+<JDF Type="Combined" Types="Trimming LayoutPreparation Imposition Interpreting Rendering DigitalPrinting HoleMaking Folding Stitching">
+    <ResourcePool>
+        <TrimmingParams>
+            <GeneralID IDUsage="oce:CutWidth" IDValue="<double>" />
+        </TrimmingParams>
+    </ResourcePool>
+</JDF>

@@ -1,0 +1,11 @@
+<JDF Types="LayoutPreparation Imposition Interpreting Rendering ColorSpaceConversion DigitalPrinting">
+    <ResourcePool>
+        <ColorSpaceConversionParams ID="res_1">
+            <ColorSpaceConversionOp SourceCS="RGB" Operation="Convert" RenderingIntent="Saturation" />
+            <ColorSpaceConversionOp SourceCS="CMYK" Operation="Convert" RenderingIntent="Perceptual" />
+        </ColorSpaceConversionParams>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <ColorSpaceConversionParamsLink rRef="res_1" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>

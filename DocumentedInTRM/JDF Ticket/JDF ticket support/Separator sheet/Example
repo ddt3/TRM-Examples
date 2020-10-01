@@ -1,0 +1,26 @@
+<JDF Type="Combined" Types="... DigitalPrinting ..." ...>
+    <ResourcePool>
+        <RunList ID="NodeIDRunList" Class="Parameter" Status="Available" ...></RunList>
+        <Media ID="MediaId1" ... />
+        <DigitalPrintingParams ...=>
+            <!-- Offset stacking is applied to each set in the output bin -->
+            <Disjointing OffsetDirection="Alternate" />
+            <null>
+                <InsertSheet SheetFormat="Blank" SheetType="SeparatorSheet" SheetUsage="Header" IsWaste="true">
+                    <null>
+                        <Layout Name="MySeparatorTemplate">
+                            <MediaRef rRef="MediaId1" />
+                        </Layout>
+                </InsertSheet>
+                </Disjointing>
+        </DigitalPrintingParams>
+        <Component ID="NodeIDComponent" Class="Quantity" Status="Unavailable" ... />
+        ...
+    </ResourcePool>
+    ...
+    <ResourceLinkPool>
+        <RunListLink Usage="Input" rRef="NodeIDRunList" />
+        <DigitalPrintingParamsLink rRef="NodeIDDPP" Usage="Input" />
+        ...
+    </ResourceLinkPool>
+</JDF>

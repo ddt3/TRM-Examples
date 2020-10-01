@@ -1,0 +1,7 @@
+<JDF>
+    <ResourcePool>
+        <Contact ID="<text>" ContactTypes="Owner" oce:UserID="<text>">
+            <oce:ComChannel ChannelType="ComputerName" Locator="<hostname>" />
+        </Contact>
+    </ResourcePool>
+</JDF>

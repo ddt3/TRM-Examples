@@ -1,0 +1,12 @@
+<JDF>
+    <ResourcePool>
+        <DigitalPrintingParams ID="res_6">
+            <MediaRef rRef="media_job_default" />
+        </DigitalPrintingParams>
+        <Media ID="media_job_default" Class="Consumable" Status="Available"></Media>
+    </ResourcePool>
+    <ResourceLinkPool>
+        <DigitalPrintingParamsLink rRef="res_6" Usage="Input" />
+        <MediaLink rRef="media_job_default" Usage="Input" />
+    </ResourceLinkPool>
+</JDF>
