@@ -1,20 +1,20 @@
 # TRM Examples
-A number of examples used in the TRM
-## XSLT
-Example XSLT scripts for JDF ticket transformations
 
-| Name                 | Description                                                           |
-|----------------------|-----------------------------------------------------------------------|
-|empty.xslt            | Can be used as a starting point to transform JDF                      |
-|add_staples.xslt      |Adds 2 staples to a job if the JobName contains "_2staple"             |
-|add_staples-no-ns.xslt|Adds 2 staples to a job if the JobName contains "_2staple"             |
+This repository contains a number of examples to clarify and use PRISMAsync interfaces. 
+All examples that are used in the TRM can be found here. In addition a number of examples have been added per subject
 
-
+## DocumentedInTRM
+All examples that are in the trm can be found in this folder.
+Each chapter in the TRM is a seperate folder
 
 ## JMFJDF
-Example JMF and JDF files for use with e.g. CIP4 Alces. Files illustrate functionality to help build understanding
+Additional examples of JDF tickets and JMF messages
 
-| Name                            | Description                                                           |
-|---------------------------------|-----------------------------------------------------------------------|
-|query_resource.jmf               |Simple QueryResource                                                   |
-|query_resource_media_in_trays.jmf|QueryResource querying only paper assigned to a tray                   |
+## JDF
+Addditional JDF tickets for proprietary job submission (ticket and job data in one file)
+
+## XSLT
+Additional XSLT files for JDF ticket transformations in PRISMAsync 
+
+## Python
+Example python module that uses jmf/jdf for job management and job submission to PRISMAsync
