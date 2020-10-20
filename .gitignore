@@ -139,3 +139,4 @@ cython_debug/
 /.vs
 Python/temp/QueryQueueStatus-Jdf.jmf
 Python/temp/test.jmf
+Python/config.ini

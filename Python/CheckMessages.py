@@ -1,6 +1,6 @@
 import time,jmfmessages
-nroftest = 3
-nrofthreads = 3
+nroftest = 30
+nrofthreads = 30
 
 def loopqueue ():
     for x in range(nroftest):
@@ -11,7 +11,7 @@ def loopqueue ():
 def sendjob ():
     for x in range(nroftest):
         start_time = time.time()
-        nrentries=jmfmessages.SendJob(printer,1,1)
+        nrentries=jmfmessages.SendJob(printer)
         timeused=time.time()-start_time
         print("Time:",start_time,"SendJob:",nrentries,"Pass:",x+1, timeused)
  
@@ -24,7 +24,7 @@ from threading import Thread
 
 if __name__ == '__main__':
     list_threads = []
-    for tnr in range (1,nrofthreads+1): 
+    for tnr in range (0,nrofthreads): 
         t1 = Thread(target = sendjob)
         t2 = Thread(target = loopqueue)
         list_threads.append(t1)
