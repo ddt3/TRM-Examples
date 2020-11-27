@@ -132,7 +132,7 @@ def RemoveQueueEntries (url, status):
     for i in range(nrjobs):
       to_delete+="<QueueEntryDef QueueEntryID=\""+queue_ids[i]+"\" />\n"
 
-    jmf_message=read_jmfjdf('jmfjdf/RemoveQueueEntry.jmf')
+    jmf_message=read_jmfjdf('jmfjdf/RemoveQueueEntry.jmf') 
     jmf_message=jmf_message.replace("<QueueEntryDef QueueEntryID=\"QUEUEENTRY\" />",to_delete)
     headers={'Content-Type': 'multipart/related'}
     deletemessage=mimeheader_jmf+jmf_message+mimefooter
@@ -151,6 +151,95 @@ def RemoveQueueEntries (url, status):
         nrjobs-=1
     return nrjobs
 
+def CreateMimePackage (jmf_file, jdf_file,pdf_url) :
+  """Creates a mime pacakge from the provided files
+
+    Parameters:
+    jmf_file: Path to jmf file (first file in mime)
+    jdf_file: Path to jdf file (second file in mime)
+    pdf_url:  Url to PDF file. 
+              use file:// url to base64 encode the PDF and add it to the mime package (third file in mime)
+              in all other cases the pdf_url will be used for JDF FileSpec URL
+    Returns:
+    Filename of created mime package 
+  """
+  # unique_filename = str(uuid.uuid4())+".mjm"
+  encoded_filename="EN-"+str(uuid.uuid4())
+
+  # First determine if PDF needs to be included in mime of referenced by url 
+  sendmime="file://" in pdf_url
+  pdf_file=str(pdf_url).replace("file://","")
+  if sendmime:
+    #PDF needs to be read from disk
+    try:
+      print ("Filename:", pdf_file) 
+      with open(pdf_file, "rb") as source, open(encoded_filename, "wb") as target:
+          # Create base64 encoded file from PDF
+          with Base64IO(target) as encoded_target:
+              for line in source:
+                  encoded_target.write(line)
+    except:
+      print("File", sendmime, "could not be opened")
+      return ""
+
+  else:
+    pass
+    #PDF file can be found on a website
+
+  # Create complete mime package in 2 parts (without base64 PDF) or 3 parts (with base64 PDF)
+  
+  # Open mime pacakge file, using unique name to avoid conflict with other files
+  
+  # Make sure mime package filename does not exist
+  time_string=time.strftime('%Y-%m-%d_%H-%M-%S')
+  i=0  
+  unique_filename = time_string+"_"+str(i)+".mjm"
+  while os.path.exists(unique_filename):
+    i+=1
+    unique_filename=time_string+"_"+str(i)+".mjm"
+  
+  with open(unique_filename, 'w') as outfile:
+    # Part 1: JMF messages 
+    # Start with JMF mimeheader
+    outfile.write(mimeheader_jmf)
+    # Add jmf file
+    with open(jmf_file,'r') as tempfile:
+      jmf_message=tempfile.read()
+      # Include regerence  JDF file in jmf message. Note that JDF is  part2 of this mime pacakge. 
+      jmf_message=re.sub("URL=\".*\"","URL=\"cid:part2@cpp.canon\"",jmf_message)
+    outfile.write(jmf_message)
+    
+    # Part 2: JDF ticket
+    # Start with JDF mimeheader
+    outfile.write(mimeheader_jdf)
+    # Add jdf file
+    with open(jdf_file, 'r') as tempfile:
+      jdf_message=tempfile.read()
+      if sendmime :
+        jdf_message=re.sub("URL=\".*\"","URL=\"cid:part3@cpp.canon\"",jdf_message)
+      else :
+        jdf_message=re.sub("URL=\".*\"","URL=\""+pdf_url+"\"",jdf_message)
+      
+      #Adding the current time to the JDF ticket ID and PARTID, to make job easier to find in PRISMAsync jmf logging.
+      jdf_message=jdf_message.replace("REPLACE_ID",time.asctime())
+      jdf_message=jdf_message.replace("REPLACE_JOBPARTID",time.asctime())
+    outfile.write(jdf_message)
+
+    # Part 3: PDF file
+    if sendmime :
+      # Needs to be send in mime package, adding it
+      # Start with PDF mimeheader
+      outfile.write(mimeheader_pdf)
+      # Add pdf file
+      with open(encoded_filename,'r') as tempfile:
+        for line in tempfile:
+          outfile.write(line)
+      os.remove(encoded_filename)
+    outfile.write(mimefooter)
+
+  #outfile closed, return mime file name
+  return unique_filename
+
 def SendJob(url,pdfurl):
   """Sends a pre-defined job to the given url
 
@@ -162,48 +251,9 @@ def SendJob(url,pdfurl):
 
   """
   # Because a PDF file can have a large size, the complete message is first created as a file on disk
-  unique_filename = str(uuid.uuid4())
-  encoded_filename="EN-"+unique_filename
-  sendmime=str(pdfurl).replace("file://","")
-  if sendmime:
-    #PDF file can be found on disk
-    try:
-      print ("Filename:", sendmime) 
-      with open(sendmime, "rb") as source, open(encoded_filename, "wb") as target:
-          with Base64IO(target) as encoded_target:
-              for line in source:
-                  encoded_target.write(line)
-    except:
-      print("File", sendmime, "could not be opened")
-      return 0
-
-  else:
-    pass
-    #PDF file can be found on a website
-  with open(unique_filename, 'w') as outfile:
-    outfile.write(mimeheader_jmf)
-    with open("jmfjdf/SubmitQueueEntry.jmf",'r') as tempfile:
-      jmf_message=tempfile.read()
-      jmf_message=re.sub("URL=\".*\"","URL=\"cid:part2@cpp.canon\"",jmf_message)
-    outfile.write(jmf_message)
-
-    outfile.write(mimeheader_jdf)
-    with open("jmfjdf/job1.jdf", 'r') as tempfile:
-      jdf_message=tempfile.read()
-      jdf_message=re.sub("URL=\".*\"","URL=\"cid:part3@cpp.canon\"",jdf_message)
-      
-      #Adding the current time to the JDF ticket ID and PARTID, easier to find in PRISMAsync jmf logging.
-      jdf_message=jdf_message.replace("REPLACE_ID",time.asctime())
-      jdf_message=jdf_message.replace("REPLACE_JOBPARTID",time.asctime())
-    outfile.write(jdf_message)
-    if sendmime :
-      outfile.write(mimeheader_pdf)
-      with open("jmfjdf/encoded_file",'r') as tempfile:
-        for line in tempfile:
-          outfile.write(line)
-    outfile.write(mimefooter)
   
-  with open(unique_filename,'r') as datafile:
+  mime_file=CreateMimePackage("jmfjdf/SubmitQueueEntry.jmf","jmfjdf/job1.jdf",pdfurl)
+  with open(mime_file,'r') as datafile:
     headers={'Content-Type': 'multipart/related'}
     try:
       response=requests.post(url=url, data=datafile.read(), headers=headers)
@@ -214,6 +264,6 @@ def SendJob(url,pdfurl):
       return 0
     Entries=root.getElementsByTagName("QueueEntry")
     id_array=Entries[0].getAttribute("QueueEntryID")
-  os.remove(unique_filename)
-  os.remove(encoded_filename)
+  if id_array :
+    os.remove(mime_file)
   return id_array
