@@ -1,11 +1,10 @@
 import requests
 import xml.dom.minidom
 import time
-# import config7
 from jmfmessages import SendJob
 
-# This library contains contains examples of how jmf can be used to send command to PRISMAsync and obtain information from PRISMAsync
-# All jmf messages are send mime-encoded. Note that no libary is used for mime-encoding, messages are mime-encoded "by hand"
+# The jmfmessages library contains examples of how jmf can be used to send commands to PRISMAsync and obtain information from PRISMAsync
+# This file is an example of how the libraries can be used to send jobs to PRISMAsync 
 
-print("Job was submitted and has QueueEntryID:",SendJob("http://fat-cep-601.ocevenlo.oce.net:8010", "file://C:/Users/hdok/source/repos/TRM-Examples/Python/jmfjdf/Test.pdf"))
-print("Job was submitted and has QueueEntryID:",SendJob("http://fat-cep-601.ocevenlo.oce.net:8010", "http://ubuntu-hdok.ocevenlo.oce.net/pdf/PosterFashionWomanplusTextSample.pdf"))
+print("Job was submitted and has QueueEntryID:",SendJob("http://hq-cep3.oce.nl:8010", "file://jmfjdf/Test.pdf"))
+print("Job was submitted and has QueueEntryID:",SendJob("http://hq-cep3.oce.nl:8010", "http://ubuntu-hdok.ocevenlo.oce.net/pdf/PosterFashionWomanplusTextSample.pdf"))
